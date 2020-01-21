@@ -5,8 +5,7 @@ import time
 import datetime
 import hashlib
 import re
-
-url = "https://google.com.br"
+import sys
 
 # take the archive name
 def archiveName(string):
@@ -16,6 +15,9 @@ def archiveName(string):
 
 def discovery():
     if __name__ == "__main__":
+
+        url = sys.argv[1]
+
         #open the site
         webbrowser.open(url, new=0, autoraise=True)
         time.sleep(4)
